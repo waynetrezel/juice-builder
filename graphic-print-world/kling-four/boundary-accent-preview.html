@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>JuiceBuilder — Boundary accent study</title>
+  <style>
+    :root { color-scheme: light; background: #f5f0e7; color: #163a72; }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; min-height: 100%; }
+    body { background: #f5f0e7 url('./panels/paper-grain.svg') repeat; font-family: Arial, sans-serif; }
+    main { width: min(1220px, calc(100% - 48px)); margin: 0 auto; padding: 52px 0 90px; }
+    h1 { margin: 0 0 8px; font-size: clamp(28px, 4vw, 52px); letter-spacing: -.05em; line-height: 1.1; }
+    .intro { max-width: 52ch; margin: 0 0 48px; line-height: 1.55; color: #526782; }
+    .study { margin: 0 0 58px; }
+    .study figcaption { display: flex; align-items: baseline; gap: 14px; margin: 0 0 12px; font-size: 13px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
+    .study figcaption span { color: #e9663c; font-size: 12px; }
+    .preview { height: 710px; position: relative; overflow: hidden; border: 1px solid rgba(22,58,114,.12); background: #f5f0e7; }
+    .panel { position: absolute; inset-inline: 0; height: 50%; display: grid; place-items: center; padding: 2rem; text-align: center; font-size: 11px; font-weight: 700; letter-spacing: .18em; }
+    .panel--top { top: 0; background: rgba(255,255,255,.22); }
+    .panel--bottom { bottom: 0; background: rgba(245,240,231,.58); }
+    .seam { position: absolute; inset: 50% 0 auto; height: 0; z-index: 2; pointer-events: none; }
+    .seam img { display: block; position: absolute; right: 0; top: 0; width: min(100%,1120px); height: auto; transform: translateY(-50%); }
+    @media (max-width: 650px) {
+      main { width: calc(100% - 24px); padding-top: 28px; }
+      .intro { margin-bottom: 28px; }
+      .study { margin-bottom: 34px; }
+      .preview { height: 390px; }
+      .seam img { width: 100%; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Boundary accent study</h1>
+    <p class="intro">Three distinct, fine torn-paper treatments with more orange ink. These are previews for the panel joins; the main page has not been changed.</p>
+
+    <figure class="study">
+      <figcaption><span>01</span> Discover → Decide</figcaption>
+      <div class="preview" aria-label="Discover to Decide boundary accent preview">
+        <div class="panel panel--top">DISCOVER PANEL</div>
+        <div class="panel panel--bottom">DECIDE PANEL</div>
+        <div class="seam" aria-hidden="true"><img src="./panels/panel-boundary-discover-fine.png" alt=""></div>
+      </div>
+    </figure>
+
+    <figure class="study">
+      <figcaption><span>02</span> Decide → Make</figcaption>
+      <div class="preview" aria-label="Decide to Make boundary accent preview">
+        <div class="panel panel--top">DECIDE PANEL</div>
+        <div class="panel panel--bottom">MAKE PANEL</div>
+        <div class="seam" aria-hidden="true"><img src="./panels/panel-boundary-decide-fine.png" alt=""></div>
+      </div>
+    </figure>
+
+    <figure class="study">
+      <figcaption><span>03</span> Delivery → Sip</figcaption>
+      <div class="preview" aria-label="Delivery to Sip boundary accent preview">
+        <div class="panel panel--top">DELIVERY PANEL</div>
+        <div class="panel panel--bottom">SIP PANEL</div>
+        <div class="seam" aria-hidden="true"><img src="./panels/panel-boundary-delivery-fine.png" alt=""></div>
+      </div>
+    </figure>
+  </main>
+</body>
+</html>

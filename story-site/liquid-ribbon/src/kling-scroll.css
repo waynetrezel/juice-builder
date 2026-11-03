@@ -1,0 +1,175 @@
+.kling-page {
+  max-width: 88rem;
+  padding: clamp(1.25rem, 4vw, 4rem) clamp(1.25rem, 5vw, 5rem) 6rem;
+  margin: 0 auto;
+}
+
+html {
+  background: #000;
+}
+
+html, body { overflow-x: clip; }
+
+.kling-intro { max-width: 43rem; padding: clamp(3rem, 10vw, 9rem) 0 clamp(3rem, 8vw, 7rem); }
+.kling-intro h1 { font-size: clamp(4rem, 12vw, 10rem); }
+
+.kling-story { position: relative; min-height: 320svh; }
+
+.kling-stage {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  display: block;
+  min-height: min(78svh, 50rem);
+  width: 100vw;
+  max-width: 100vw;
+  margin-left: calc(50% - 50vw);
+  padding: 0;
+  background: #000;
+}
+
+.kling-stage::before {
+  display: none;
+}
+
+.kling-stage img {
+  display: block;
+  width: 100vw;
+  max-height: none;
+  max-width: 100vw;
+  height: auto;
+  object-fit: contain;
+  background: #000;
+}
+
+.kling-stage video {
+  display: block;
+  width: min(88%, 72rem);
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
+  background: #000;
+  object-fit: contain;
+  pointer-events: none;
+}
+
+.kling-meta { width: min(88rem, 100%); margin: .7rem auto 0; padding: 0 clamp(1.25rem, 5vw, 5rem); color: #615c55; font-size: .72rem; letter-spacing: .08em; text-transform: uppercase; }
+.kling-meta a { color: #615c55; }
+.kling-meta a:hover, .kling-meta a:focus-visible { color: #1b5b4a; }
+
+.kling-chapters {
+  position: relative;
+  z-index: 2;
+  display: none;
+  align-content: space-between;
+  min-height: 300svh;
+  margin-top: -78svh;
+  pointer-events: none;
+}
+
+.kling-chapters article {
+  width: min(18rem, 75vw);
+  padding: 1rem 1.1rem;
+  border: 1px solid rgba(244,240,232,.22);
+  background: rgba(14,18,17,.82);
+  color: var(--muted);
+  opacity: .48;
+  transform: translateY(1rem);
+  transition: opacity .25s ease, transform .25s ease, border-color .25s ease;
+}
+
+.kling-chapters article:nth-child(even) { justify-self: end; }
+.kling-chapters article.is-active { border-color: var(--accent); opacity: 1; transform: translateY(0); }
+.kling-chapters span { color: var(--accent); font-size: .7rem; font-weight: 700; letter-spacing: .16em; }
+.kling-chapters h2 { margin: .45rem 0 .2rem; color: var(--ink); font-family: Georgia, "Times New Roman", serif; font-size: 1.55rem; font-weight: 400; }
+.kling-chapters p { margin: 0; font-size: .82rem; line-height: 1.45; }
+
+.kling-note { max-width: 36rem; margin-top: 7rem; padding-top: 1rem; border-top: 1px solid var(--line); color: var(--muted); font-size: .88rem; line-height: 1.6; }
+.kling-note strong { color: var(--ink); }
+
+body.kling-black {
+  background: #000;
+}
+
+body.kling-black .kling-stage::before {
+  background: #000;
+}
+
+body.kling-black .kling-stage { background: #000; }
+
+body.kling-black .kling-stage img {
+  width: min(88%, 72rem);
+  margin: 0 auto;
+}
+
+body.kling-black .kling-meta,
+body.kling-black .kling-meta a {
+  color: #aaa49a;
+}
+
+body.kling-warm {
+  color: #201c18;
+  background: #e4dad1;
+}
+
+body.kling-black {
+  color: #f4f0e8;
+  background: #000;
+}
+
+body.kling-black::before {
+  display: none;
+}
+
+body.kling-black .kling-stage {
+  background: #000;
+}
+
+body.kling-black .kling-stage img {
+  background: #000;
+}
+
+body.kling-black .kling-meta,
+body.kling-black .kling-meta a,
+body.kling-black .kling-note,
+body.kling-black .back-link {
+  color: #aaa49a;
+}
+
+body.kling-black .eyebrow {
+  color: var(--accent);
+}
+
+body.kling-black .lede,
+body.kling-black .kling-note strong {
+  color: var(--ink);
+}
+
+body.kling-black .back-link:hover,
+body.kling-black .back-link:focus-visible,
+body.kling-black .kling-meta a:hover,
+body.kling-black .kling-meta a:focus-visible {
+  color: var(--accent);
+}
+
+body.kling-warm::before {
+  opacity: .08;
+  background-image: linear-gradient(rgba(80,65,50,.08) 1px, transparent 1px), linear-gradient(90deg, rgba(80,65,50,.08) 1px, transparent 1px);
+}
+
+body.kling-warm .eyebrow { color: #2d6954; }
+body.kling-warm .lede,
+body.kling-warm .back-link,
+body.kling-warm .kling-note { color: #6c6258; }
+body.kling-warm .back-link:hover,
+body.kling-warm .back-link:focus-visible { color: #2d6954; }
+
+@media (max-width: 700px) {
+  .kling-stage { min-height: 0; }
+  .kling-chapters { min-height: 300svh; margin-top: -48svh; }
+  .kling-chapters article { width: min(15rem, 82vw); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .kling-chapters article { transition: none; }
+}

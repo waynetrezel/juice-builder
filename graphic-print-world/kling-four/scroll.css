@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Alike+Angular&family=Assistant:wght@400;500;600;700&display=swap');
+:root{font-family:'Assistant',Arial,sans-serif;color:#163a72;background:#f5f0e7;font-synthesis:none}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#f5f0e7}a{color:inherit}
+.skip{position:fixed;z-index:100;top:-4rem;left:1rem;padding:.7rem 1rem;background:#163a72;color:#fff}.skip:focus{top:1rem}
+.topbar{position:fixed;z-index:20;top:0;left:0;right:0;display:flex;align-items:center;gap:2rem;justify-content:space-between;padding:1.25rem clamp(1.25rem,4vw,4rem);pointer-events:none}
+.topbar>*{pointer-events:auto}.brand{text-decoration:none;font-weight:700;letter-spacing:-.075em;font-size:1.3rem}.brand span{font-weight:500}.brand b{color:#ef6337}.topbar-note,.topbar-counter{font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;font-weight:700}.topbar-note{position:absolute;left:50%;transform:translateX(-50%)}.topbar-counter{color:#e9663c}
+.film-chapter{height:380svh;position:relative}.film-stage{position:sticky;top:0;height:100svh;overflow:hidden;background:#f5f0e7;isolation:isolate}
+.film-poster,.film-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center}.film-video{opacity:0}.film-chapter.has-video .film-video{opacity:1}.film-chapter.has-video .film-poster{opacity:0}
+.wash{position:absolute;inset:0;background:linear-gradient(90deg,rgba(245,240,231,.88) 0%,rgba(245,240,231,.77) 21%,rgba(245,240,231,0) 46%);pointer-events:none}
+.story-copy{--copy-enter:1;--copy-exit:0;position:absolute;top:50%;left:clamp(1.25rem,7.4vw,8rem);transform:translate3d(0,-50%,0);width:min(34rem,43vw);z-index:2;will-change:opacity}.story-copy .eyebrow,.story-copy h1,.story-copy h2,.story-copy>p:last-child{will-change:transform,opacity}.story-copy .eyebrow{display:flex;gap:1rem;align-items:center;font-size:.7rem;letter-spacing:.24em;font-weight:700;color:#e9663c;opacity:calc(.65 + var(--copy-enter) * .35);transform:translate3d(calc((1 - var(--copy-enter)) * -18px),0,0)}.eyebrow span{color:#163a72}.story-copy h1,.story-copy h2{margin:1.4rem 0 1.1rem;font-family:'Caprasimo',Georgia,serif;font-size:clamp(3.4rem,7vw,8.6rem);font-weight:400;line-height:.99;letter-spacing:-.045em;opacity:calc(.82 + var(--copy-enter) * .18);transform:translate3d(calc((1 - var(--copy-enter)) * -10px),0,0)}.story-copy h1 em,.story-copy h2 em{color:#e9663c;font-weight:400}.story-copy>p:last-child{max-width:22rem;font-size:clamp(.95rem,1.25vw,1.2rem);line-height:1.65;color:#3e5067;opacity:calc(.68 + var(--copy-enter) * .32);transform:translate3d(calc((1 - var(--copy-enter)) * -5px),0,0)}
+.story-copy .title-split .title-line{display:inline-block;white-space:nowrap;will-change:transform,opacity}
+.scroll-hint{position:absolute;left:clamp(1.25rem,7.4vw,8rem);bottom:3rem;font-size:.65rem;letter-spacing:.18em;font-weight:700}.scroll-hint span{font-size:1.2rem;margin-left:.5rem}.chapter-progress{position:absolute;bottom:0;left:0;right:0;height:4px;background:rgba(22,58,114,.12)}.chapter-progress span{display:block;width:0;height:100%;background:#e9663c}
+@media(max-width:700px){.topbar{padding:1rem 1.2rem}.topbar-note{display:none}.film-poster,.film-video{top:34svh;left:auto;right:-15vw;width:195vw;height:auto;object-fit:contain;object-position:center}.wash{background:linear-gradient(180deg,#f5f0e7 0%,rgba(245,240,231,.88) 23%,rgba(245,240,231,0) 48%)}.story-copy{top:5.4rem;left:1.25rem;transform:translate3d(0,-50%,0);width:calc(100% - 2.5rem)}.story-copy h1,.story-copy h2{font-size:clamp(2.8rem,12vw,4.8rem);margin:.6rem 0}.story-copy>p:last-child{font-size:.87rem;max-width:20rem;margin:.4rem 0}.scroll-hint{left:1.25rem;bottom:2rem}}
+.story-panel{min-height:0;position:relative;background:#f5f0e7}.panel-stage{position:relative;top:auto;height:auto;overflow:visible;background:#f5f0e7;isolation:isolate}.panel-art{position:relative;inset:auto;display:block;width:100%;height:auto;object-fit:initial;object-position:initial;background:transparent}.panel-wash{position:absolute;inset:0;background:linear-gradient(90deg,rgba(245,240,231,.96) 0%,rgba(245,240,231,.88) 22%,rgba(245,240,231,.26) 52%,rgba(245,240,231,0) 76%);pointer-events:none}.panel-copy{position:absolute;top:50%;left:clamp(1.25rem,7.4vw,8rem);transform:translate3d(0,-50%,0);width:min(34rem,43vw);z-index:2}.panel-copy .eyebrow,.panel-copy h2,.panel-copy>p:last-child{opacity:0;will-change:transform,opacity}.panel-copy .eyebrow{display:flex;gap:1rem;align-items:center;font-size:.7rem;letter-spacing:.24em;font-weight:700;color:#e9663c}.panel-copy h2{margin:1.4rem 0 1.1rem;font-family:'Caprasimo',Georgia,serif;font-size:clamp(3.4rem,7vw,8.6rem);font-weight:400;line-height:.99;letter-spacing:-.045em}.panel-copy h2 em{color:#e9663c;font-weight:400}.panel-copy>p:last-child{max-width:22rem;font-size:clamp(.95rem,1.25vw,1.2rem);line-height:1.65;color:#3e5067}.story-panel.is-visible .panel-copy .eyebrow{animation:juice-panel-eyebrow-in 1.28s ease-in-out .08s both}.story-panel.is-visible .panel-copy h2{animation:juice-panel-title-in 1.4s ease-in-out .16s both}.story-panel.is-visible .panel-copy>p:last-child{animation:juice-panel-body-in 1.32s ease-in-out .36s both}.panel-decide.is-visible .panel-copy h2{animation-name:juice-panel-build-title-in}.panel-delivery.is-visible .panel-copy h2{animation-name:juice-panel-route-title-in}.panel-decide .panel-wash{background:linear-gradient(90deg,rgba(245,240,231,.96) 0%,rgba(245,240,231,.9) 25%,rgba(245,240,231,.16) 57%,rgba(245,240,231,0) 82%)}.panel-delivery .panel-wash{background:linear-gradient(90deg,rgba(245,240,231,.96) 0%,rgba(245,240,231,.9) 24%,rgba(245,240,231,.22) 55%,rgba(245,240,231,0) 80%)}
+/* The approved remakes already contain their paper margins. No padded canvas or spacer is added. */
+body{background:#f5f0e7 url('./panels/paper-grain.svg') repeat}
+.story-panel,.panel-stage{background:transparent}
+.panel-art{background:transparent;mask-image:linear-gradient(to bottom,transparent,#000 6%,#000 94%,transparent);-webkit-mask-image:linear-gradient(to bottom,transparent,#000 6%,#000 94%,transparent)}
+.panel-wash,.panel-decide .panel-wash,.panel-delivery .panel-wash{display:none}
+.panel-copy{width:min(37vw,48rem)}
+.panel-copy h2{font-size:clamp(3.1rem,5.2vw,7.6rem)}
+/* Transparent ingredients occupy the existing paper gap, leaving its centre open. */
+.discovery-journey{position:relative;isolation:isolate}
+.discovery-journey[data-polaroid-over-video='true']{z-index:100}
+.discovery-journey[data-handoff='true']{z-index:30}
+.discovery-journey[data-polaroids-active='true']{z-index:30}
+.ingredient-trail{position:absolute;z-index:3;top:calc(var(--trail-seam,50%) - clamp(32px,3.5vw,133px));left:0;right:0;height:clamp(220px,20vw,680px);transform:translateY(-50%);pointer-events:none;user-select:none}
+.trail-piece{position:absolute;display:block;transform:translate3d(var(--drift-x,0px),var(--drift-y,0px),0) rotate(calc(var(--tilt,0deg) + var(--drift-turn,0deg)));will-change:transform;transform-origin:center}
+.trail-piece img{display:block;width:100%;height:auto;filter:drop-shadow(0 5px 5px rgba(69,47,17,.1));-webkit-user-drag:none}
+.trail-orange{--tilt:-18deg;left:13%;top:34%;width:clamp(100px,10vw,280px)}
+.trail-mint{--tilt:21deg;right:12%;top:3%;width:clamp(90px,9vw,250px)}
+.trail-berries{--tilt:-12deg;left:64%;top:64%;width:clamp(85px,8vw,220px)}
+.trail-ink{--tilt:12deg;left:25%;top:70%;width:clamp(28px,2vw,54px);aspect-ratio:1;border-radius:50%;background:radial-gradient(circle,#174991 1.2px,transparent 1.8px) 0 0 / 7px 7px;opacity:.5}
+.trail-dot{aspect-ratio:1;border-radius:48% 52% 46% 54%;opacity:.78}
+.trail-dot-blue{left:71%;top:28%;width:clamp(8px,.7vw,18px);background:#174991}
+.trail-dot-orange{right:8%;top:74%;width:clamp(9px,.8vw,22px);background:#ed693a}
+@media(max-width:700px){
+  .ingredient-trail{top:calc(var(--trail-seam,50%) - 6px);height:108px}
+  .trail-orange{left:4%;top:14%;width:70px}
+  .trail-mint{right:8%;top:12%;width:65px}
+  .trail-berries,.trail-ink,.trail-dot-blue{display:none}
+  .trail-dot-orange{right:30%;top:66%;width:7px}
+}
+@media(prefers-reduced-motion:reduce){.trail-piece{transform:rotate(var(--tilt,0deg));will-change:auto}}
+/* A long, torn-paper film roll replaces the trail in this gap. The trail remains saved. */
+.inspiration-film{--film-end:-72vw;--reel-width:clamp(150px,9vw,300px);position:absolute;z-index:3;left:0;right:0;top:calc(var(--film-seam,50%) - clamp(32px,3.5vw,133px));height:clamp(300px,22vw,680px);transform:translateY(-50%);overflow:hidden;overflow:clip;pointer-events:none;user-select:none}
+.inspiration-film-angle{position:absolute;top:50%;left:-2vw;right:-2vw;transform:translateY(-50%) rotate(-.9deg);transform-origin:center}
+.inspiration-film-track{width:max-content;transform:translate3d(var(--film-end),0,0)}
+.inspiration-film-stock{padding:6px 0;background:#eadfc9 url('./panels/paper-grain.svg') repeat;mask-image:url('./panels/film-paper-mask.svg');mask-repeat:repeat-x;mask-size:160px 100%;mask-mode:alpha;-webkit-mask-image:url('./panels/film-paper-mask.svg');-webkit-mask-repeat:repeat-x;-webkit-mask-size:160px 100%}
+.inspiration-film-cells{display:flex;gap:clamp(12px,1vw,24px);width:max-content;padding:calc(var(--reel-width) * .1 + 14px) 16px;background:linear-gradient(rgba(22,58,114,.93),rgba(22,58,114,.93)),url('./panels/paper-grain.svg') repeat}
+.reel-frame{position:relative;flex:none;width:var(--reel-width);aspect-ratio:3/4;margin:0;overflow:hidden;background:#f5f0e7;outline:1px solid rgba(245,240,231,.24)}
+.reel-frame img{display:block;width:100%;height:100%;object-fit:cover;object-position:center 57%;filter:saturate(.94) contrast(1.02);-webkit-user-drag:none}
+.reel-marker{position:absolute;right:.6rem;bottom:.6rem;width:1.65rem;height:1.65rem;border:1px solid rgba(255,255,255,.75);border-radius:50%;background:rgba(17,35,52,.18)}
+.reel-marker::after{content:'';position:absolute;inset:26% 24% 26% 32%;background:#fff;clip-path:polygon(0 0,100% 50%,0 100%)}
+.inspiration-film[data-film-state='waiting'] .inspiration-film-track{transform:translate3d(105vw,0,0)}
+.inspiration-film[data-film-state='playing'] .inspiration-film-track{animation:inspiration-film-sweep 2.2s cubic-bezier(.65,0,.35,1) both;will-change:transform}
+@keyframes inspiration-film-sweep{from{transform:translate3d(105vw,0,0)}to{transform:translate3d(var(--film-end),0,0)}}
+@media(max-width:1200px){.inspiration-film{position:relative;top:auto;height:300px;transform:none}}
+@media(max-width:700px){.inspiration-film{--reel-width:116px;height:248px}.inspiration-film-cells{gap:12px;padding:22px 12px}.reel-marker{width:1.25rem;height:1.25rem;right:.4rem;bottom:.4rem}}
+@media(prefers-reduced-motion:reduce){.inspiration-film .inspiration-film-track{animation:none!important;transform:translate3d(var(--film-end),0,0)!important;will-change:auto}}
+@keyframes juice-panel-eyebrow-in{from{opacity:0;transform:translate3d(-44px,22px,0) rotate(-4deg)}to{opacity:1;transform:translate3d(0,0,0) rotate(0deg)}}
+@keyframes juice-panel-title-in{from{opacity:0;transform:translate3d(0,88px,0) scale(.91);clip-path:inset(72% 0 0)}to{opacity:1;transform:translate3d(0,0,0) scale(1);clip-path:inset(0 0 0)}}
+@keyframes juice-panel-build-title-in{from{opacity:0;transform:translate3d(0,0,0) scale(.78) rotate(-4deg)}to{opacity:1;transform:translate3d(0,0,0) scale(1) rotate(0deg)}}
+@keyframes juice-panel-route-title-in{from{opacity:0;transform:translate3d(-76px,0,0) skewX(-6deg)}to{opacity:1;transform:translate3d(0,0,0) skewX(0deg)}}
+@keyframes juice-panel-body-in{from{opacity:0;transform:translate3d(20px,42px,0);filter:blur(6px)}to{opacity:1;transform:translate3d(0,0,0);filter:blur(0)}}
+@media(max-width:700px){.panel-art{inset:auto;width:100%;height:auto;object-fit:initial;object-position:initial}.panel-wash{background:linear-gradient(180deg,#f5f0e7 0%,rgba(245,240,231,.9) 25%,rgba(245,240,231,.18) 58%,rgba(245,240,231,0) 78%)}.panel-copy{top:5.8rem;left:1.25rem;transform:none;width:calc(100% - 2.5rem)}.panel-copy h2{font-size:clamp(2.8rem,12vw,4.8rem);margin:.6rem 0}.panel-copy>p:last-child{font-size:.87rem;max-width:20rem;margin:.4rem 0}}
+@media(max-width:700px){
+  .panel-stage{display:flex;flex-direction:column;aspect-ratio:auto;min-height:0}
+  .panel-copy{position:relative;order:-1;top:auto;left:auto;transform:none;width:auto;padding:4rem 1.25rem 0}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.film-chapter{height:100svh}.film-video{display:none}.film-chapter.has-video .film-poster{opacity:1}}
+
+/* Copy animates once when its chapter enters the viewport; scroll remains reserved for the film. */
+.story-copy .eyebrow,.story-copy h1,.story-copy h2,.story-copy>p:last-child{opacity:0;transform:none}
+.film-chapter.is-visible .story-copy .eyebrow{animation:juice-eyebrow-in 1.28s ease-in-out .08s both}
+.film-chapter.is-visible .story-copy h1:not(.title-split),.film-chapter.is-visible .story-copy h2{animation:juice-title-in 1.4s ease-in-out .16s both}
+.film-chapter.is-visible .story-copy>p:last-child{animation:juice-body-in 1.32s ease-in-out .36s both}
+.story-copy .title-split{opacity:1;transform:none;clip-path:none}
+.story-copy .title-split .title-line{opacity:0;transform:none}
+.story-copy~.scroll-hint{will-change:transform,opacity}
+.film-chapter:not(.is-visible) .scroll-hint{opacity:0}
+.film-chapter.is-visible .story-copy .title-split .title-line-left{animation:juice-line-left-in 1.4s ease-in-out .08s both}
+.film-chapter.is-visible .story-copy .title-split .title-line-right{animation:juice-line-right-in 1.4s ease-in-out .26s both}
+.film-chapter.is-visible .scroll-hint{animation:juice-hint-in 1.2s ease-in-out .48s both}
+@keyframes juice-eyebrow-in{from{opacity:0;transform:translate3d(-52px,24px,0) rotate(-3deg)}to{opacity:1;transform:translate3d(0,0,0) rotate(0deg)}}
+@keyframes juice-title-in{from{opacity:0;transform:translate3d(0,104px,0) scale(.9);clip-path:inset(76% 0 0)}to{opacity:1;transform:translate3d(0,0,0) scale(1);clip-path:inset(0 0 0)}}
+@keyframes juice-body-in{from{opacity:0;transform:translate3d(24px,48px,0) scale(.98);filter:blur(7px)}to{opacity:1;transform:translate3d(0,0,0) scale(1);filter:blur(0)}}
+@keyframes juice-line-left-in{from{opacity:0;transform:translate3d(-140px,0,0)}to{opacity:1;transform:translate3d(0,0,0)}}
+@keyframes juice-line-right-in{from{opacity:0;transform:translate3d(140px,0,0)}to{opacity:1;transform:translate3d(0,0,0)}}
+@keyframes juice-hint-in{from{opacity:0;transform:translate3d(0,20px,0)}to{opacity:1;transform:translate3d(0,0,0)}}
+@media(prefers-reduced-motion:reduce){.story-copy .eyebrow,.story-copy h1,.story-copy h2,.story-copy>p:last-child,.story-copy .title-split .title-line,.scroll-hint,.panel-copy .eyebrow,.panel-copy h2,.panel-copy>p:last-child{opacity:1!important;transform:none!important;clip-path:none!important;filter:none!important;animation:none!important}}
+
+/* Scroll-driven creator Polaroids: the approved dense pile separates into a loose trail. */
+.inspiration-film{display:none!important}
+.polaroid-trail{--trail-overlap-top:clamp(360px,34vw,700px);position:fixed;inset:0;z-index:80!important;width:100%;height:100svh;min-height:0;margin:0;background:transparent;isolation:isolate;pointer-events:none;visibility:hidden;opacity:0}
+.polaroid-trail[data-active='true']{visibility:visible;opacity:1}
+.polaroid-trail-stage{position:absolute;inset:0;height:100%;min-height:0;overflow:hidden;isolation:isolate}
+.polaroid-collage{position:absolute;top:50%;left:50%;width:clamp(620px,78vw,1320px);aspect-ratio:1672 / 941;margin:0;will-change:transform;transform-origin:center;filter:drop-shadow(0 18px 15px rgba(58,43,24,.16));backface-visibility:hidden}
+.polaroid-collage img{display:block;width:100%;height:100%;object-fit:contain;pointer-events:none;user-select:none;-webkit-user-drag:none}
+@media(max-width:700px){
+  .polaroid-trail{--trail-overlap-top:260px}
+  .polaroid-collage{width:min(760px,145vw);filter:drop-shadow(0 10px 10px rgba(58,43,24,.14))}
+}
+
+/* Split seam accents cross the existing panel joins without adding height. */
+.panel-boundary-accent{position:relative;z-index:12;height:0;overflow:visible;pointer-events:none;user-select:none}
+.panel-boundary-half{display:block;position:absolute;top:0;right:0;width:100%;max-width:none;height:auto;transform:translateY(-50%);-webkit-user-drag:none}
+.panel-boundary-half--upper{clip-path:inset(0 0 50% 0)}
+.panel-boundary-half--lower{clip-path:inset(50% 0 0 0)}
+@media(prefers-reduced-motion:reduce){.polaroid-collage{will-change:auto;filter:drop-shadow(0 10px 10px rgba(58,43,24,.14))}}
+
+/* Individual creator Polaroids: each card gets its own short scroll passage. */
+.polaroid-cards{position:fixed;inset:0;z-index:7;overflow:hidden;pointer-events:none;isolation:isolate}
+.polaroid-card{--card-size:clamp(150px,13vw,230px);position:absolute;top:calc(var(--card-y,50) * 1%);left:50%;width:var(--card-size);margin:0;opacity:0;visibility:hidden;transform:translate3d(-50%,-50%,0) rotate(var(--card-rotate,0deg));filter:drop-shadow(0 14px 12px rgba(58,43,24,.18));will-change:transform,opacity;backface-visibility:hidden}
+.polaroid-card[data-card-active="true"]{visibility:visible}
+.polaroid-card img{display:block;width:100%;height:auto;pointer-events:none;user-select:none;-webkit-user-drag:none}
+.polaroid-card{visibility:visible;filter:none;transition:opacity .5s ease-in-out}
+.polaroid-card{z-index:1;isolation:isolate}
+/* The approved torn backing and contact shadow are part of each transparent asset. */
+.polaroid-card img{position:relative;z-index:1}
+@media(max-width:700px){.polaroid-card{--card-size:clamp(125px,31vw,185px)}}
+@media(prefers-reduced-motion:reduce){.polaroid-cards{display:none!important}}
+
+/* Scroll bridge from the making film into the delivery map. Props are transparent torn-paper cut-outs. */
+.bridge-parallax{position:fixed;inset:0;z-index:12;pointer-events:none;visibility:hidden;opacity:0;isolation:isolate;transition:opacity .35s ease-in-out}
+.bridge-parallax[data-active='true']{visibility:visible;opacity:1}
+.bridge-parallax-stage{position:absolute;inset:0;overflow:hidden}
+.bridge-prop{position:absolute;display:block;width:clamp(110px,13vw,250px);height:auto;opacity:0;transform:translate3d(var(--bridge-x,0),var(--bridge-y,0),0) rotate(var(--bridge-rotate,0deg));filter:drop-shadow(0 10px 8px rgba(58,43,24,.14));will-change:transform,opacity;user-select:none;-webkit-user-drag:none}
+.bridge-lemon{left:4%;top:70%;width:clamp(130px,15vw,270px)}
+.bridge-mint{right:9%;top:67%;width:clamp(110px,12vw,220px)}
+.bridge-citrus{left:44%;top:72%;width:clamp(150px,17vw,300px)}
+.bridge-parcel{right:5%;top:57%;width:clamp(160px,19vw,340px)}
+.bridge-route{left:30%;top:63%;width:clamp(210px,28vw,500px)}
+@media(max-width:700px){.bridge-lemon{left:-8%;top:70%;width:110px}.bridge-mint{right:-5%;top:66%;width:88px}.bridge-citrus{left:38%;top:73%;width:125px}.bridge-parcel{right:-8%;top:56%;width:140px}.bridge-route{left:18%;top:63%;width:180px}.bridge-prop{filter:drop-shadow(0 7px 6px rgba(58,43,24,.12))}}
+@media(prefers-reduced-motion:reduce){.bridge-parallax{display:none!important}}
+
+/* Display titles use the requested Alike Angular face. */
+.story-copy h1,.story-copy h2,.panel-copy h2{font-family:'Alike Angular',Georgia,serif}
+.chapter-progress-decorative{background:#e9663c;z-index:3}
+.route-parallax{position:absolute;left:0;right:0;top:0;height:1px;z-index:18;pointer-events:none;visibility:hidden;opacity:0;overflow:visible;isolation:isolate;transition:opacity .22s ease-in-out}
+.route-parallax[data-active='true']{visibility:visible;opacity:1}
+.route-parallax-line{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
+.route-parallax-line path{fill:none;stroke-linecap:round;stroke-linejoin:round}
+.route-parallax-mask{stroke:#fff;stroke-width:34;stroke-linecap:round;stroke-linejoin:round;fill:none}
+.route-parallax-underlay{stroke:rgba(233,102,60,.14);stroke-width:8}
+.route-parallax-path{stroke:#e9663c;stroke-width:3.5;stroke-dasharray:12 18;stroke-dashoffset:0;filter:drop-shadow(0 2px 1px rgba(98,55,31,.12))}
+.route-parallax-markers{overflow:visible}
+.route-parallax-marker{fill:#e9663c;stroke:#f7f3eb;stroke-width:2.5;opacity:0;transition:opacity .14s ease-out}
+.route-parallax-bottle{position:absolute;left:0;top:0;width:clamp(56px,8vw,118px);height:auto;transform-origin:center;will-change:transform;filter:drop-shadow(0 8px 7px rgba(58,43,24,.18))}
+@media(max-width:700px){.route-parallax-path{stroke-width:3}.route-parallax-bottle{width:clamp(52px,18vw,88px)}}
+.route-parallax ~ .discovery-journey .story-copy,.route-parallax ~ .discovery-journey .panel-copy,.route-parallax ~ .film-chapter .story-copy{z-index:5}
+@media(max-width:900px), (prefers-reduced-motion:reduce){.route-parallax{display:none!important}}
+
+/* Keep phone captions below the fixed wordmark, including the two-line opener. */
+@media(max-width:700px){
+  .story-copy{transform:none}
+  .story-copy .title-split{font-size:clamp(2.1rem,10.8vw,4.2rem)}
+}

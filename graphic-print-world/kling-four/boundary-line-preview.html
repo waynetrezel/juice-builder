@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>JuiceBuilder — Along-the-line boundary study</title>
+  <style>
+    :root { color-scheme: light; font-family: Arial, sans-serif; color: #163a72; background: #f5f0e7; }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; min-height: 100%; }
+    body { background: #f5f0e7 url('./panels/paper-grain.svg') repeat; }
+    main { width: min(1320px, calc(100% - 48px)); margin: 0 auto; padding: 48px 0 80px; }
+    h1 { margin: 0 0 12px; font-size: clamp(2rem, 4vw, 3.5rem); line-height: 1.05; letter-spacing: -.045em; }
+    .intro { max-width: 58ch; margin: 0 0 36px; color: #4d627b; font-size: 1rem; line-height: 1.55; }
+    .intro strong { color: #e9663c; }
+    .study { margin: 0 0 42px; }
+    .study h2 { margin: 0 0 10px; font-size: .75rem; letter-spacing: .14em; text-transform: uppercase; color: #e9663c; }
+    .demo { position: relative; height: 610px; overflow: hidden; border: 1px solid rgba(22,58,114,.14); background: #f5f0e7; }
+    .panel { position: absolute; left: 0; right: 0; height: 50%; display: grid; place-items: center; overflow: hidden; font-size: .7rem; font-weight: 700; letter-spacing: .18em; text-transform: uppercase; }
+    .panel--above { top: 0; background: #f6f1e9 url('./panels/paper-grain.svg') repeat; }
+    .panel--below { bottom: 0; background: #f2ede5 url('./panels/paper-grain.svg') repeat; }
+    .seam-half { position: absolute; z-index: 2; left: 50%; display: block; width: 100%; max-width: 1672px; height: auto; pointer-events: none; user-select: none; -webkit-user-drag: none; }
+    .panel--above .seam-half { bottom: 0; transform: translate(-50%, 50%); clip-path: inset(0 0 50% 0); }
+    .panel--below .seam-half { top: 0; transform: translate(-50%, -50%); clip-path: inset(50% 0 0 0); }
+    @media (max-width: 700px) {
+      main { width: calc(100% - 24px); padding: 28px 0 44px; }
+      .intro { margin-bottom: 24px; font-size: .9rem; }
+      .demo { height: 430px; }
+      .panel { font-size: .6rem; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Along the boundary</h1>
+    <p class="intro">Preview only: each variation keeps a fine left detail and fine right detail on the same join. Every accent is split at the line, with its upper half on the panel above and its lower half on the panel below. The main JuiceBuilder page has not been changed.</p>
+    <section class="study">
+      <h2>Thin seam · approved silhouette</h2>
+      <div class="demo" aria-label="Thin approved split boundary accent">
+        <div class="panel panel--above">Panel above<img class="seam-half" src="./panels/panel-boundary-inline-thin-sample.png" width="1672" height="941" alt="" aria-hidden="true"></div>
+        <div class="panel panel--below">Panel below<img class="seam-half" src="./panels/panel-boundary-inline-thin-sample.png" width="1672" height="941" alt="" aria-hidden="true"></div>
+      </div>
+    </section>
+    <section class="study">
+      <h2>Variation one · rise and dip</h2>
+      <div class="demo" aria-label="Rise and dip split boundary accent">
+        <div class="panel panel--above">Panel above<img class="seam-half" src="./panels/panel-boundary-inline-thin-rise-dip.png" width="1672" height="941" alt="" aria-hidden="true"></div>
+        <div class="panel panel--below">Panel below<img class="seam-half" src="./panels/panel-boundary-inline-thin-rise-dip.png" width="1672" height="941" alt="" aria-hidden="true"></div>
+      </div>
+    </section>
+    <section class="study">
+      <h2>Variation two · playful zigzag</h2>
+      <div class="demo" aria-label="Playful zigzag split boundary accent">
+        <div class="panel panel--above">Panel above<img class="seam-half" src="./panels/panel-boundary-inline-thin-playful.png" width="1672" height="941" alt="" aria-hidden="true"></div>
+        <div class="panel panel--below">Panel below<img class="seam-half" src="./panels/panel-boundary-inline-thin-playful.png" width="1672" height="941" alt="" aria-hidden="true"></div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

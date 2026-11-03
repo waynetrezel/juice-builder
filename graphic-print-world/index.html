@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f5f0e7" />
+    <meta name="description" content="A layered scroll story for JuiceBuilder: imagined, made, designed and enjoyed in a tactile graphic print world." />
+    <title>JuiceBuilder — Layered Graphic Print Story</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./layered.css" />
+    <script src="./layered.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#after-story">Skip the visual story</a>
+    <header class="site-header" aria-label="Site header">
+      <a class="brand" href="#story" aria-label="JuiceBuilder, back to start">JUICE<span>BUILDER</span><span class="brand-dot">.</span></a>
+      <span class="header-note">A drink of your own making</span>
+      <span class="header-index" aria-hidden="true">LAYERED STUDY / 02</span>
+    </header>
+
+    <main>
+      <section id="story" class="story" aria-label="How your drink comes to life">
+        <div class="stage">
+          <svg id="paper-art" class="paper-art" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false">
+            <defs>
+              <filter id="soft-paper" x="-2%" y="-2%" width="104%" height="104%"><feTurbulence type="fractalNoise" baseFrequency=".78" numOctaves="3" seed="8" stitchTiles="stitch" /></filter>
+              <filter id="paper-edge" x="-4%" y="-4%" width="108%" height="108%"><feTurbulence type="fractalNoise" baseFrequency=".025" numOctaves="2" seed="4" result="noise" /><feDisplacementMap in="SourceGraphic" in2="noise" scale="3" /></filter>
+              <pattern id="orange-dots" width="15" height="15" patternUnits="userSpaceOnUse"><circle cx="3" cy="3" r="3.4" fill="#ee632f" /></pattern>
+              <pattern id="blue-dots" width="14" height="14" patternUnits="userSpaceOnUse"><circle cx="3" cy="3" r="2.6" fill="#123e86" /></pattern>
+              <clipPath id="bottle-clip"><path d="M84 105 H176 L181 162 C183 179 198 190 207 216 L229 541 Q231 577 202 583 H58 Q29 577 31 541 L53 216 C62 190 77 179 79 162 Z" /></clipPath>
+              <g id="orange-slice-art">
+                <circle r="101" fill="#f6e5bd" /><circle r="89" fill="#f0692d" /><circle r="75" fill="none" stroke="#ffe7c4" stroke-width="7" />
+                <path d="M0-76V76 M-76 0H76 M-54-54 54 54 M54-54-54 54 M-29-70 29 70 M29-70-29 70" stroke="#ffe7c4" stroke-width="5" />
+                <circle r="10" fill="#fff3d8" />
+              </g>
+              <g id="kiwi-slice-art">
+                <circle r="91" fill="#e1d6a7" /><circle r="81" fill="#72994c" /><circle r="51" fill="#b9c887" /><circle r="22" fill="#f4e7c1" />
+                <g fill="#1d2924"><ellipse cx="0" cy="-42" rx="3" ry="8"/><ellipse cx="21" cy="-36" rx="3" ry="8" transform="rotate(30 21 -36)"/><ellipse cx="37" cy="-20" rx="3" ry="8" transform="rotate(60 37 -20)"/><ellipse cx="42" cy="0" rx="3" ry="8" transform="rotate(90 42 0)"/><ellipse cx="36" cy="21" rx="3" ry="8" transform="rotate(120 36 21)"/><ellipse cx="20" cy="37" rx="3" ry="8" transform="rotate(150 20 37)"/><ellipse cx="0" cy="42" rx="3" ry="8"/><ellipse cx="-21" cy="36" rx="3" ry="8" transform="rotate(-30 -21 36)"/><ellipse cx="-37" cy="20" rx="3" ry="8" transform="rotate(-60 -37 20)"/><ellipse cx="-42" cy="0" rx="3" ry="8" transform="rotate(90 -42 0)"/><ellipse cx="-36" cy="-21" rx="3" ry="8" transform="rotate(60 -36 -21)"/><ellipse cx="-20" cy="-37" rx="3" ry="8" transform="rotate(30 -20 -37)"/></g>
+              </g>
+              <g id="leaf-art"><path d="M0 0 C29-71 93-84 150-119 C145-52 97-3 0 0 Z" fill="#477955"/><path d="M0 0 Q73-55 150-119" fill="none" stroke="#d8d2a0" stroke-width="3" /></g>
+            </defs>
+
+            <rect width="1600" height="900" fill="#f5f0e7" />
+            <rect width="1600" height="900" filter="url(#soft-paper)" opacity=".075" style="mix-blend-mode:multiply" />
+
+            <g id="profile" filter="url(#paper-edge)">
+              <image href="./layers/profile-paper.webp" x="700" y="70" width="900" height="810" />
+            </g>
+
+            <g id="ideas">
+              <g id="idea-orange" transform="translate(1110 266) scale(.78)" filter="url(#paper-edge)"><image href="./layers/orange-paper.webp" x="-130" y="-130" width="260" height="260" /></g>
+              <g id="idea-kiwi" transform="translate(1260 395) scale(.73)" filter="url(#paper-edge)"><image href="./layers/kiwi-paper.webp" x="-130" y="-130" width="260" height="260" /></g>
+              <g id="idea-leaves" transform="translate(1170 594)" filter="url(#paper-edge)"><use href="#leaf-art" transform="rotate(-15)" /><use href="#leaf-art" transform="rotate(60) scale(.72)" /></g>
+              <g id="idea-card" transform="translate(1345 458) rotate(9)" filter="url(#paper-edge)">
+                <rect x="-86" y="-137" width="172" height="274" fill="#f8f1e1" />
+                <path d="M-23-85 H23 V-65 C23-56 36-53 39-40 L47 82 Q47 96 34 96 H-34 Q-47 96-47 82 L-39-40 C-36-53-23-56-23-65 Z" fill="none" stroke="#e65c32" stroke-width="5" />
+                <path d="M-69-111 H69 M-69 111 H69" stroke="#e65c32" stroke-width="2" opacity=".6" />
+              </g>
+            </g>
+
+            <g id="print-marks" opacity="0">
+              <rect x="912" y="325" width="170" height="158" fill="url(#orange-dots)" opacity=".75" />
+              <rect x="1245" y="665" width="150" height="89" fill="url(#blue-dots)" opacity=".8" />
+              <g stroke="#e65c32" stroke-width="3" fill="none"><circle cx="932" cy="295" r="23"/><path d="M895 295 H969 M932 258 V332"/><circle cx="1430" cy="642" r="20"/><path d="M1397 642 H1463 M1430 609 V675"/></g>
+            </g>
+
+            <g id="proofs" opacity="0">
+              <g transform="translate(840 460) rotate(-10)" filter="url(#paper-edge)"><rect x="-90" y="-135" width="180" height="270" fill="#f8efe0" /><path d="M-21-84 H21 V-57 Q34-52 38-28 L48 88 H-48 L-38-28 Q-34-52-21-57 Z" fill="none" stroke="#e65c32" stroke-width="5"/><path d="M-72-108 H72 M-72 105 H72" stroke="#e65c32" opacity=".6" /></g>
+              <g transform="translate(1495 338) rotate(9)" filter="url(#paper-edge)"><rect x="-82" y="-104" width="164" height="208" fill="#f9f0dd"/><use href="#orange-slice-art" transform="translate(0 2) scale(.58)" /></g>
+              <g transform="translate(818 647) rotate(-18)" filter="url(#paper-edge)"><rect x="-100" y="-62" width="200" height="124" fill="#f9efdb"/><use href="#leaf-art" transform="translate(-60 32) scale(.65)" /></g>
+            </g>
+
+            <g id="bottle-motion" opacity="0" transform="translate(1180 475) scale(.2) translate(-130 -320)">
+              <g id="bottle-art" filter="url(#paper-edge)">
+                <path d="M84 105 H176 L181 162 C183 179 198 190 207 216 L229 541 Q231 577 202 583 H58 Q29 577 31 541 L53 216 C62 190 77 179 79 162 Z" fill="#fff6e7" stroke="#fffaf0" stroke-width="14" />
+                <g clip-path="url(#bottle-clip)">
+                  <rect x="25" y="165" width="210" height="420" fill="#f7e9d7" />
+                  <rect id="liquid" x="25" y="583" width="210" height="0" fill="#ef642e" />
+                  <rect id="liquid-dots" x="25" y="583" width="210" height="0" fill="url(#orange-dots)" opacity=".4" />
+                </g>
+                <path d="M84 105 H176 L181 162 C183 179 198 190 207 216 L229 541 Q231 577 202 583 H58 Q29 577 31 541 L53 216 C62 190 77 179 79 162 Z" fill="none" stroke="#153f85" stroke-width="4" opacity=".55" />
+                <g id="label-wrap" opacity="0" transform="translate(180 0)">
+                  <path d="M37 319 H223 V476 H37 Z" fill="#f7f0df" stroke="#fffaf0" stroke-width="8" />
+                  <path d="M89 454 C99 404 110 383 131 351 M91 419 C72 393 61 383 55 364 M103 400 C128 398 146 386 153 367" stroke="#30745b" stroke-width="6" fill="none" />
+                  <path d="M93 425 C48 413 53 376 55 364 C72 371 97 390 93 425 Z M106 399 C130 351 151 358 162 357 C156 380 137 399 106 399 Z" fill="#3b775a" />
+                  <use href="#orange-slice-art" transform="translate(171 426) scale(.39)" />
+                  <rect x="44" y="330" width="50" height="28" fill="url(#blue-dots)" />
+                </g>
+                <g id="cap"><rect x="77" y="59" width="106" height="56" rx="9" fill="#15458e" stroke="#fff9ef" stroke-width="7" /><path d="M92 67 V106 M104 67 V106 M116 67 V106 M128 67 V106 M140 67 V106 M152 67 V106 M164 67 V106" stroke="#f7ebd5" stroke-width="3" opacity=".6" /></g>
+              </g>
+              <image id="bottle-final" href="./layers/bottle-capped-paper.webp" x="-104" y="-13" width="468" height="648" opacity="0" />
+              <image id="bottle-open" href="./layers/bottle-open-paper.webp" x="-104" y="-13" width="468" height="648" opacity="0" />
+            </g>
+
+            <g id="label-hand" opacity="0" transform="translate(320 0)" filter="url(#paper-edge)">
+              <image href="./layers/label-hand-paper.webp" x="1127" y="420" width="500" height="281" />
+            </g>
+
+            <g id="sip-hands" opacity="0" transform="rotate(-20 1000 600)">
+              <image href="./layers/hands-paper.webp" x="700" y="400" width="650" height="396" />
+            </g>
+
+            <g id="sip-person" opacity="0" transform="translate(400 0)" filter="url(#paper-edge)">
+              <image href="./layers/person-paper.webp" x="1140" y="130" width="600" height="553" />
+            </g>
+
+            <g id="table-strip" opacity="0" filter="url(#paper-edge)"><path d="M670 852 H1600 V886 H670 Z" fill="#15458e" /></g>
+          </svg>
+
+          <div class="stage-content" aria-hidden="true">
+            <div class="eyebrow"><span class="eyebrow-line"></span><span id="scene-number">01 / 04</span><span>THE STORY</span></div>
+            <div class="copy is-visible" data-copy="0"><span class="chapter-name">IMAGINE</span><h1>It starts<br />with <em>you.</em></h1><p>Every good drink begins as an idea. Yours should taste like no one else’s.</p></div>
+            <div class="copy" data-copy="1"><span class="chapter-name">MAKE</span><h2>Make the<br /><em>idea real.</em></h2><p>Choices become colour. Colour becomes your drink.</p></div>
+            <div class="copy" data-copy="2"><span class="chapter-name">DESIGN</span><h2>Make it<br /><em>yours.</em></h2><p>A bottle with your own design, made to be picked up.</p></div>
+            <div class="copy" data-copy="3"><span class="chapter-name">ENJOY</span><h2>Then enjoy<br /><em>every sip.</em></h2><p>The best part is the moment it becomes yours.</p></div>
+            <div class="copy" data-copy="4"><span class="chapter-name">JUICEBUILDER</span><h2>Made by<br /><em>your imagination.</em></h2><p>A personal drink, from the first thought to the last drop.</p></div>
+            <span class="scroll-cue">SCROLL TO SEE IT COME TO LIFE <span aria-hidden="true">↓</span></span>
+            <div class="progress" aria-hidden="true"><span id="progress-fill"></span></div>
+          </div>
+        </div>
+        <div class="scroll-space" aria-hidden="true"></div>
+        <ol class="sr-only"><li>Imagine a personalised drink.</li><li>Make the drink and fill a bottle.</li><li>Apply a bespoke label.</li><li>Take a sip and set the bottle down.</li></ol>
+      </section>
+      <section id="after-story" class="after-story" aria-labelledby="after-title">
+        <span class="after-rule" aria-hidden="true"></span>
+        <div><p class="after-kicker">A LAYERED STUDY</p><h2 id="after-title">Made of paper.<br />Made for you.</h2></div>
+        <p>Cut paper, printed colour and a drink made personal. This is a working scroll animation study for JuiceBuilder.</p>
+      </section>
+    </main>
+  </body>
+</html>

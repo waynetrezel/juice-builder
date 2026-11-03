@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#171a16" />
+    <meta name="description" content="Juicebuilder kiwi ingredient look test in an industrial kitchen." />
+    <title>Juicebuilder — Kiwi look test</title>
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+    <style>
+      :root { color-scheme: dark; font-family: Arial, sans-serif; background: #171a16; color: #f2f2ea; }
+      * { box-sizing: border-box; }
+      body { margin: 0; }
+      header { display: flex; justify-content: space-between; gap: 1rem; padding: 1.5rem clamp(1.25rem, 5vw, 4rem); font-size: .72rem; letter-spacing: .15em; text-transform: uppercase; }
+      header a { color: #d5e267; text-decoration: none; }
+      header nav { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 1.2rem; }
+      main { padding: 3rem clamp(1.25rem, 5vw, 4rem) 5rem; }
+      .eyebrow { color: #d5e267; font-size: .7rem; letter-spacing: .18em; text-transform: uppercase; }
+      h1 { max-width: 12ch; margin: .8rem 0 1rem; font-family: Georgia, serif; font-weight: 400; font-size: clamp(3rem, 7vw, 7rem); line-height: .95; letter-spacing: -.045em; }
+      .intro { max-width: 47rem; margin: 0 0 3rem; color: #c6c9ba; line-height: 1.65; }
+      .media { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(1rem, 3vw, 2rem); align-items: start; }
+      figure { margin: 0; }
+      img, video { display: block; width: 100%; aspect-ratio: 16 / 11; object-fit: cover; background: #24271f; border-radius: .4rem; }
+      figcaption { padding: .85rem 0; font-size: .72rem; letter-spacing: .06em; color: #b8b9aa; }
+      footer { border-top: 1px solid #ffffff20; padding: 1.5rem clamp(1.25rem, 5vw, 4rem); color: #929789; font-size: .7rem; }
+      @media (max-width: 800px) { .media { grid-template-columns: 1fr; } }
+    </style>
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        if (matchMedia('(prefers-reduced-motion: reduce)').matches) document.querySelector('video')?.pause();
+      });
+    </script>
+  </head>
+  <body>
+    <header><strong>Juicebuilder / Look test 01</strong><nav aria-label="Related previews"><a href="./kiwi-scroll.html?v=6">Scroll version ↗</a><a href="./?animatic=1&version=16#story">Full story ↗</a></nav></header>
+    <main>
+      <p class="eyebrow">Ingredient pilot · Kiwi</p>
+      <h1>Fresh from every angle.</h1>
+      <p class="intro">A focused 3D study of one ingredient in the industrial kitchen. A scanned kiwi reveals its cut face, breaks into small pieces, becomes juice, then pours into two temporary bottles.</p>
+      <div class="media">
+        <figure><img src="./assets/kiwi/kiwi-hero-v6.webp" alt="Whole kiwi beside a cut kiwi half and an open glass blender in the industrial kitchen" /><figcaption>01 / Full quality still</figcaption></figure>
+        <figure><video autoplay muted loop playsinline controls poster="./assets/kiwi/kiwi-hero-v6.webp" aria-label="Kiwi enters the kitchen, reveals its cut face, breaks into pieces, becomes juice, and pours into two bottles"><source src="./assets/kiwi/kiwi-motion-v6.mp4" type="video/mp4" /></video><figcaption>02 / Six-second story pilot</figcaption></figure>
+      </div>
+    </main>
+    <footer>Visual development · Blender scene available in the project</footer>
+  </body>
+</html>

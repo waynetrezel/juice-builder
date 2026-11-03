@@ -1,0 +1,10 @@
+node_modules/
+.env
+.env.*
+!.env.example
+__pycache__/
+*.pyc
+*.blend[0-9]*
+.DS_Store
+Thumbs.db
+.local-review/

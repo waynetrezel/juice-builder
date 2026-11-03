@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f5f0e7" />
+    <meta name="description" content="JuiceBuilder Graphic Print World: a scroll-driven concept story about creating a drink that is entirely yours." />
+    <title>JuiceBuilder — Graphic Print World</title>
+    <link rel="preload" as="image" href="./01-idea.png" />
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./app.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#after-story">Skip the visual story</a>
+    <header class="site-header" aria-label="Site header">
+      <a class="brand" href="#story" aria-label="JuiceBuilder, back to start">JUICE<span>BUILDER</span><span class="brand-dot">.</span></a>
+      <span class="header-note">A drink of your own making</span>
+      <span class="header-index" aria-hidden="true">CONCEPT / 01</span>
+    </header>
+
+    <main>
+      <section id="story" class="story" aria-label="How your drink comes to life">
+        <div class="stage">
+          <div class="frame is-visible" data-frame="0"><img src="./01-idea.png" alt="" fetchpriority="high" decoding="async" /></div>
+          <div class="frame" data-frame="1"><img src="./02-drink-forms.png" alt="" loading="lazy" decoding="async" /></div>
+          <div class="frame" data-frame="2"><img src="./03-design-applied.png" alt="" loading="lazy" decoding="async" /></div>
+          <div class="frame" data-frame="3"><img src="./04-sip.png" alt="" loading="lazy" decoding="async" /></div>
+          <div class="frame" data-frame="4"><img src="./05-final-bottle.png" alt="" loading="lazy" decoding="async" /></div>
+
+          <div class="stage-content" aria-hidden="true">
+            <div class="eyebrow"><span class="eyebrow-line"></span><span id="scene-number">01 / 04</span><span>THE STORY</span></div>
+            <div class="copy is-visible" data-copy="0">
+              <span class="chapter-name">IMAGINE</span>
+              <h1>It starts<br />with <em>you.</em></h1>
+              <p>Every good drink begins as an idea. Yours should taste like no one else’s.</p>
+            </div>
+            <div class="copy" data-copy="1">
+              <span class="chapter-name">MAKE</span>
+              <h2>Make the<br /><em>idea real.</em></h2>
+              <p>Choices become colour. Colour becomes your drink.</p>
+            </div>
+            <div class="copy" data-copy="2">
+              <span class="chapter-name">DESIGN</span>
+              <h2>Make it<br /><em>yours.</em></h2>
+              <p>A bottle with your own design, made to be picked up.</p>
+            </div>
+            <div class="copy" data-copy="3">
+              <span class="chapter-name">ENJOY</span>
+              <h2>Then enjoy<br /><em>every sip.</em></h2>
+              <p>The best part is the moment it becomes yours.</p>
+            </div>
+            <div class="copy" data-copy="4">
+              <span class="chapter-name">JUICEBUILDER</span>
+              <h2>Made by<br /><em>your imagination.</em></h2>
+              <p>A personal drink, from the first thought to the last drop.</p>
+            </div>
+            <span class="scroll-cue">SCROLL TO SEE IT COME TO LIFE <span aria-hidden="true">↓</span></span>
+            <div class="progress" aria-hidden="true"><span id="progress-fill"></span></div>
+          </div>
+        </div>
+        <div class="scroll-space" aria-hidden="true"></div>
+        <ol class="sr-only">
+          <li>Imagine: a person conceives a personalised drink using fruit and botanical ideas.</li>
+          <li>Make: the design becomes a bottle and coloured print passes represent the drink filling it.</li>
+          <li>Design: a bespoke botanical label is applied to the bottle.</li>
+          <li>Enjoy: a person takes a sip, sets the bottle down and the bottle remains as the final image.</li>
+        </ol>
+      </section>
+      <section id="after-story" class="after-story" aria-labelledby="after-title">
+        <span class="after-rule" aria-hidden="true"></span>
+        <div>
+          <p class="after-kicker">A CONCEPT STUDY</p>
+          <h2 id="after-title">A story built<br />one layer at a time.</h2>
+        </div>
+        <p>This preview sets the visual rhythm. The finished piece will animate separate paper, ink, bottle and hand layers in response to scroll.</p>
+      </section>
+    </main>
+  </body>
+</html>

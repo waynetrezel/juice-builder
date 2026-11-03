@@ -1,0 +1,8 @@
+{
+  "name": "juicebuilder-story-study",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test tests/story.test.mjs"
+  }
+}
